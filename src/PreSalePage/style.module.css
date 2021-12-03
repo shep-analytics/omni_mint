@@ -1,0 +1,149 @@
+body {
+  font-family: "Righteous", cursive;
+}
+p {
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.header_logo {
+  background-color: rgba(97, 72, 251, 255);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.logo_img {
+  max-width: 300px;
+  width: 100%;
+  padding: 1rem 0;
+}
+.body_wrapper {
+  margin-top: 1rem;
+  padding-bottom: 5px;
+}
+.body_wrapper h1 {
+  font-size: 40px;
+  font-weight: 700;
+  box-shadow: 10px;
+}
+.body_wrapper h2 {
+  color: #664af8;
+  font-weight: 700;
+  font-size: 30px;
+}
+.body_wrapper .polar_text {
+  font-size: 20px;
+}
+.address {
+  color: #664af8;
+  font-weight: 700;
+  font-size: 16px;
+}
+.gridWrap {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.wallet_btn button {
+  background-image: linear-gradient(to right, #6455f8, #74b0f9);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+}
+.grid {
+  width: 35%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.img img {
+  width: 100%;
+}
+.img img:hover {
+  color: transparent;
+}
+.mintTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.grid button {
+  background-color: red;
+  border-radius: 20px;
+  width: 100%;
+  color: white;
+  outline: none !important;
+  border: 0px;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.polar_img {
+  border: 4px solid rgb(242, 242, 242);
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+.polar_img:hover,
+.polar_img:active {
+  border: 4px solid rgba(255, 67, 101, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.body_wrapper h1 {
+  margin-top: 60px;
+}
+
+.body_wrapper h2 {
+  margin-top: 30px;
+}
+
+.address {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    max-width: 350px;
+    /* margin: auto; */
+    /* margin-bottom: 20px; */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mobile_child {
+    justify-content: center;
+  }
+
+  .grid img {
+    width: 105px;
+  }
+
+  .body_wrapper h1 {
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  .body_wrapper h2 {
+    font-size: 20px;
+    margin: 30px 0 0;
+  }
+
+  .body_wrapper .polar_text {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .address {
+    margin-top: 20px;
+  }
+
+  .logo_img {
+    max-width: 240px;
+  }
+}
