@@ -114,7 +114,7 @@ const PreSale = () => {
      
             <DropdownButton
 
-             class="text-center"
+             style={{ textAlign: "center" }}
              title={numOmnis}
              id="dropdown-menu"
              onSelect={handleSelect}
@@ -133,20 +133,20 @@ const PreSale = () => {
               </DropdownButton>
 
 
-            <div className={style.gridWrap} class="text-center">
-            <div className={style.grid}>
-              <div className={style.img}>
+
+              <div style={{ textAlign: "center" }}>
                 <a>
                   <img
                     src={mint}
                     alt="img"
                     onClick={() => BuyToken(numOmnis)}
-                    className={[style.polar_img, "bear-select"].join(" ")}
+                    width="400" 
+                    height="100"
                     id="mint"
+
                   />
                 </a>
-              </div>
-            </div>
+
 
 
             </div>
