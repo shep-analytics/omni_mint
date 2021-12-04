@@ -78,7 +78,7 @@ const PreSale = () => {
 
     tokenTransaction = await contract.methods.presaleMintItems(numberOfTokens).send({
       from: account,
-      gas: 3000000,
+//      gas: 3000000,
       value: web3.utils.toWei(cost.toString(), "ether"),
     });
     console.log(tokenABI);
