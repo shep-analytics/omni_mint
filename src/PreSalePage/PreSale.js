@@ -1,8 +1,13 @@
 import React from "react";
 import style from "./style.module.css";
-import { useEffect, useState } from "react";
+import { useEffect,useState } from "react";
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown'
+
 
 import { Button } from "react-bootstrap";
 import Web3 from "web3";
@@ -13,11 +18,19 @@ import { tokenAddress } from "../contracts/contractAddress";
 import mint from "../imgs/mint.png";
 import logo from "../imgs/logo.jpg"
 
-import { ethers } from "ethers";
+//import { ethers } from "ethers";
 
 const PreSale = () => {
-  const [omniContract, setOmniContract] = useState(null);
+  const [omniContract,setOmniContract] = useState(null);
   const [account, setAccount] = useState(null);
+
+  var price = 0.05;
+
+  const [numOmnis,setValue]=useState('');
+  const handleSelect=(e)=>{
+    console.log(e);
+    setValue(e)
+    }
   //const [preSaleAmount, setPreSaleAmount] = useState(1000);
 
   const loadWeb3 = async () => {
@@ -56,25 +69,30 @@ const PreSale = () => {
 
     console.log(account);
 
+    var cost = price * numberOfTokens;
+    console.log('I was triggered during render')
+    console.log(cost)
+    console.log(numberOfTokens)
+    console.log(numOmnis)
     
     let tokenTransaction;
     let tokenId = null;
-    let transactionData;
+//    let transactionData;
     let tokenIdArray = [];
-    if (numberOfTokens === 1) {
-      tokenTransaction = await contract.methods.presaleMintItems(1).send({
-        from: account,
-        gas: 3000000,
-        value: web3.utils.toWei("0.04", "ether"),
-      });
-      console.log(tokenABI);
 
-      tokenId = JSON.parse(JSON.stringify(tokenTransaction))["events"][
-        "Transfer"
-      ]["returnValues"];
+    tokenTransaction = await contract.methods.presaleMintItems(numberOfTokens).send({
+      from: account,
+      gas: 3000000,
+      value: web3.utils.toWei(cost.toString(), "ether"),
+    });
+    console.log(tokenABI);
 
-      document.getElementById("mint").classList.add("active-bear");
-    }
+    tokenId = JSON.parse(JSON.stringify(tokenTransaction))["events"][
+      "Transfer"
+    ]["returnValues"];
+
+    document.getElementById("mint").classList.add("active-bear");
+
 
     if (tokenId !== null) window.alert("Token ID: " + JSON.stringify(tokenId));
     else window.alert("Token IDS: " + JSON.stringify(tokenIdArray));
@@ -84,27 +102,58 @@ const PreSale = () => {
   return (
     <>
       <div className={style.wrap}>
+
         <div className={style.header_logo}>
           <img className={style.logo_img} src={logo} alt="logo" />
         </div>
-        <div className={style.body_wrapper}>
-          <h1 style={{ textAlign: "center" }}>MINT YOUR OMNI</h1>
-          <h2 style={{ textAlign: "center" }}>HOW MANY OMNIS DO YOU WANT?</h2>
-          <div className={style.gridWrap}>
+
+
+          <div className={style.body_wrapper}>
+            <h1 style={{ textAlign: "center" }}>MINT YOUR OMNI</h1>
+            <h2 style={{ textAlign: "center" }}>HOW MANY OMNIS DO YOU WANT?</h2>
+     
+            <DropdownButton
+
+             class="text-center"
+             title={numOmnis}
+             id="dropdown-menu"
+             onSelect={handleSelect}
+
+               >
+                    <Dropdown.Item eventKey="1">1</Dropdown.Item>
+                    <Dropdown.Item eventKey="2">2</Dropdown.Item>
+                    <Dropdown.Item eventKey="3">3</Dropdown.Item>
+                    <Dropdown.Item eventKey="4">4</Dropdown.Item>
+                    <Dropdown.Item eventKey="5">5</Dropdown.Item>
+                    <Dropdown.Item eventKey="6">6</Dropdown.Item>
+                    <Dropdown.Item eventKey="7">7</Dropdown.Item>
+                    <Dropdown.Item eventKey="8">8</Dropdown.Item>
+                    <Dropdown.Item eventKey="9">9</Dropdown.Item>
+                    <Dropdown.Item eventKey="10">10</Dropdown.Item>
+              </DropdownButton>
+
+
+            <div className={style.gridWrap} class="text-center">
             <div className={style.grid}>
               <div className={style.img}>
                 <a>
                   <img
                     src={mint}
                     alt="img"
-                    onClick={() => BuyToken(1)}
+                    onClick={() => BuyToken(numOmnis)}
                     className={[style.polar_img, "bear-select"].join(" ")}
                     id="mint"
                   />
                 </a>
               </div>
             </div>
-          </div>
+
+
+            </div>
+
+
+
+
           <p className={style.address} style={{ textAlign: "center" }}>
             YOUR ADDRESS:{account}
           </p>
