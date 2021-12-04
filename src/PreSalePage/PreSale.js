@@ -70,10 +70,6 @@ const PreSale = () => {
     console.log(account);
 
     var cost = price * numberOfTokens;
-    console.log('I was triggered during render')
-    console.log(cost)
-    console.log(numberOfTokens)
-    console.log(numOmnis)
     
     let tokenTransaction;
     let tokenId = null;
