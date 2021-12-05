@@ -3,6 +3,8 @@ import style from "./style.module.css";
 import { useEffect,useState } from "react";
 //import Background from '../imgs/goddess.jpeg';
 import Background from '../imgs/logo.jpg';
+import header_picture from '../imgs/header_picture.png'
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -117,25 +119,24 @@ const PreSale = () => {
                                       height: '100vh'
                                     }} >
 
-            <h1 style={{ textAlign: "center", color:'white',
-            textshadow:{
-                        color:'white',
-                        paddingLeft:30,
-                        paddingRight:30,
-                        textShadowColor:'black',
-                        textShadowOffset:{width: 5, height: 5},
-                        textShadowRadius:10,
-                      },
 
+            <div style={{ textAlign: "center" }}>
+                <img
+                  src={header_picture}
+                  alt="img"
+                  width="1000" 
+                  height="200"
+                  id="mint"
 
-             }}>MINT YOUR OMNI</h1>
-            <h2 style={{ textAlign: "center", color:'white' }}>HOW MANY OMNIS DO YOU WANT?</h2>
+                />
+            </div>
      
             <DropdownButton
              style={{ textAlign: "center" }}
              title={numOmnis}
              id="dropdown-menu"
              onSelect={handleSelect}
+
             >
                     <Dropdown.Item eventKey="1">1</Dropdown.Item>
                     <Dropdown.Item eventKey="2">2</Dropdown.Item>
