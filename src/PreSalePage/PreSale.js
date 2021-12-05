@@ -26,7 +26,8 @@ const PreSale = () => {
 
   var price = 0.05;
 
-  const [numOmnis,setValue]=useState('');
+  const [numOmnis,setValue]=useState('1');
+
   const handleSelect=(e)=>{
     console.log(e);
     setValue(e)
@@ -97,14 +98,11 @@ const PreSale = () => {
 
   return (
     <>
+    <div className={style.brandon} src={logo}>
       <div className={style.wrap}>
 
-        <div className={style.header_logo}>
-          <img className={style.logo_img} src={logo} alt="logo" />
-        </div>
 
-
-          <div className={style.body_wrapper}>
+          <div className={style.body_wrapper} src={logo}>
             <h1 style={{ textAlign: "center" }}>MINT YOUR OMNI</h1>
             <h2 style={{ textAlign: "center" }}>HOW MANY OMNIS DO YOU WANT?</h2>
      
@@ -147,6 +145,9 @@ const PreSale = () => {
 
             </div>
 
+          <h2 style={{ textAlign: "center" }}>OMNIS ARE 0.05 ETH EACH</h2>
+          <h2 style={{ textAlign: "center" }}>(Reminder: every 2 mints gets you one FREE female NFT from our next collection)</h2>
+          <h1 style={{ textAlign: "center" }}>❗ Breeding info coming soon ❗</h1>
 
 
 
@@ -159,6 +160,7 @@ const PreSale = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

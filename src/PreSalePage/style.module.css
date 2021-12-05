@@ -6,8 +6,12 @@ p {
   padding: 0;
 }
 
+.brandon{
+  margin: 0;
+}
+
 .header_logo {
-  background-color: rgba(97, 72, 251, 255);
+  background-color: rgba(97, 72, 251, 0);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -20,6 +24,7 @@ p {
 .body_wrapper {
   margin-top: 1rem;
   padding-bottom: 5px;
+  background-image: ../img/logo.jpg;
 }
 .body_wrapper h1 {
   font-size: 40px;
