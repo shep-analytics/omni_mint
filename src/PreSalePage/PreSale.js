@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./style.module.css";
 import { useEffect,useState } from "react";
-
+import Background from '../imgs/logo.jpg';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -23,6 +23,12 @@ import logo from "../imgs/logo.jpg"
 const PreSale = () => {
   const [omniContract,setOmniContract] = useState(null);
   const [account, setAccount] = useState(null);
+
+  var sectionStyle = {
+        width: "100%",
+        height: "400px",
+        backgroundImage: `url(${Background})`
+      };
 
   var price = 0.05;
 
@@ -98,8 +104,8 @@ const PreSale = () => {
 
   return (
     <>
-    <div className={style.brandon} src={logo}>
-      <div className={style.wrap}>
+      <section style={ sectionStyle }>
+      <div className={style.body} >
 
 
           <div className={style.body_wrapper} src={logo}>
@@ -146,8 +152,8 @@ const PreSale = () => {
             </div>
 
           <h2 style={{ textAlign: "center" }}>OMNIS ARE 0.05 ETH EACH</h2>
-          <h2 style={{ textAlign: "center" }}>(Reminder: every 2 mints gets you one FREE female NFT from our next collection)</h2>
-          <h1 style={{ textAlign: "center" }}>❗ Breeding info coming soon ❗</h1>
+          <h3 style={{ textAlign: "center" }}>(Reminder: every 2 mints gets you one FREE female NFT from our next collection)</h3>
+          <h3 style={{ textAlign: "center" }}>Breeding info coming soon</h3>
 
 
 
@@ -161,7 +167,7 @@ const PreSale = () => {
           </div>
         </div>
       </div>
-      </div>
+      </section>
     </>
   );
 };
