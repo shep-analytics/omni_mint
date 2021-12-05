@@ -12,7 +12,7 @@ p {
 
 .body {
  background-image: logo.jpg;
- background-color: #FFFFFF;
+ background-color: #000000;
 }
 
 .body_wrapper {
@@ -21,17 +21,19 @@ p {
   background-image: ../img/logo.jpg;
 }
 .body_wrapper h1 {
+  color: white;
   font-size: 40px;
   font-weight: 700;
   box-shadow: 10px;
 
 }
 .body_wrapper h2 {
-  color: #664af8;
+  color: white;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 30px;;
 }
 .body_wrapper h3 {
+  color: white;
   font-weight: 700;
   font-size: 30px;
 }
