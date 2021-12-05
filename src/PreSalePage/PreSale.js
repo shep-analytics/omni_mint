@@ -27,7 +27,7 @@ const PreSale = () => {
   var sectionStyle = {
         width: "100%",
         height: "400px",
-        backgroundImage: `url(${Background})`
+        backgroundImage: "url(" + Background + ")"
       };
 
   var price = 0.05;
@@ -104,7 +104,6 @@ const PreSale = () => {
 
   return (
     <>
-      <section style={ sectionStyle }>
       <div className={style.body} >
 
 
@@ -167,7 +166,6 @@ const PreSale = () => {
           </div>
         </div>
       </div>
-      </section>
     </>
   );
 };
