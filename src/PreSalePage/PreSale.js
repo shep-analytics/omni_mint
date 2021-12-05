@@ -108,7 +108,21 @@ const PreSale = () => {
 
   return (
 
+      <body className="background"
+                                    style={{
 
+                                      backgroundImage: `url(${Background})`,
+                                      backgroundPosition: 'center',
+                                      backgroundSize: 'cover',
+                                      backgroundRepeat: 'no-repeat',
+                                      width: '100vw',
+                                      height: '100vh'
+                                    }} >
+
+
+                                    <h1>presale over</h1>
+
+      </body>
 
 
 
