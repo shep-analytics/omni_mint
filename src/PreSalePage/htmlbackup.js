@@ -58,3 +58,10 @@
             </div>
           </div>
       </body>
+
+
+
+
+                          <h2 style={{ textAlign: "center",  color:'white'}}>OMNIS ARE 0.05 ETH EACH</h2>
+          <h3 style={{ textAlign: "center",  color:'white' }}>(Reminder: every 2 mints gets you one FREE female NFT from our next collection)</h3>
+          <h3 style={{ textAlign: "center",  color:'white' }}>Breeding info coming soon!</h3>

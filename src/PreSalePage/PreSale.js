@@ -17,6 +17,7 @@ import { tokenABI } from "../contracts/ABIs";
 import { tokenAddress } from "../contracts/contractAddress";
 
 import mint from "../imgs/mint.png";
+import omni_text from "../imgs/writing.png"
 import logo from "../imgs/logo.jpg"
 
 //import { ethers } from "ethers";
@@ -108,7 +109,7 @@ const PreSale = () => {
       <body className="background"
                                     style={{
 
-                                      backgroundColor: 'black',
+                                      backgroundImage: `url(${Background})`,
                                       backgroundPosition: 'center',
                                       backgroundSize: 'cover',
                                       backgroundRepeat: 'no-repeat',
@@ -116,7 +117,18 @@ const PreSale = () => {
                                       height: '100vh'
                                     }} >
 
-            <h1 style={{ textAlign: "center", color:'white' }}>MINT YOUR OMNI</h1>
+            <h1 style={{ textAlign: "center", color:'white',
+            textshadow:{
+                        color:'white',
+                        paddingLeft:30,
+                        paddingRight:30,
+                        textShadowColor:'black',
+                        textShadowOffset:{width: 5, height: 5},
+                        textShadowRadius:10,
+                      },
+
+
+             }}>MINT YOUR OMNI</h1>
             <h2 style={{ textAlign: "center", color:'white' }}>HOW MANY OMNIS DO YOU WANT?</h2>
      
             <DropdownButton
@@ -153,10 +165,17 @@ const PreSale = () => {
               </a>
             </div>
 
-          <h2 style={{ textAlign: "center",  color:'white'}}>OMNIS ARE 0.05 ETH EACH</h2>
-          <h3 style={{ textAlign: "center",  color:'white' }}>(Reminder: every 2 mints gets you one FREE female NFT from our next collection)</h3>
-          <h3 style={{ textAlign: "center",  color:'white' }}>Breeding info coming soon</h3>
 
+            <div style={{ textAlign: "center" }}>
+                <img
+                  src={omni_text}
+                  alt="img"
+                  width="1000" 
+                  height="200"
+                  id="mint"
+
+                />
+            </div>
 
           <p className={style.address} style={{ textAlign: "center" }}>
             YOUR ADDRESS:{account}
@@ -165,7 +184,8 @@ const PreSale = () => {
             <div className={style.wallet_btn}>
               <Button onClick={loadWeb3}>CONNECT WALLET</Button>
             </div>
-          </div>
+          </div>>
+
       </body>
 
 
