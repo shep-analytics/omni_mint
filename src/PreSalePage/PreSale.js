@@ -150,8 +150,8 @@ const PreSale = () => {
                     <Dropdown.Item eventKey="8">8</Dropdown.Item>
                     <Dropdown.Item eventKey="9">9</Dropdown.Item>
                     <Dropdown.Item eventKey="10">10</Dropdown.Item>
-                    <Dropdown.Item eventKey="10">15</Dropdown.Item>
-                    <Dropdown.Item eventKey="10">20</Dropdown.Item>
+                    <Dropdown.Item eventKey="15">15</Dropdown.Item>
+                    <Dropdown.Item eventKey="20">20</Dropdown.Item>
             </DropdownButton>
 
             <h2 style={{ textAlign: "center" }}></h2>
